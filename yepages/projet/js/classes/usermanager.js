@@ -125,6 +125,11 @@ class UserManager{
         
     }
     
+    login(username, password)
+    {
+        
+    }
+    
 }
 
 export { UserManager };

@@ -54,11 +54,14 @@ table {
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
+  background-color: #080710;
 }
 body .sr-only {
   display: none;
@@ -67,9 +70,15 @@ body header {
   height: 10vh;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #fff;
 }
 body header h2 {
   align-self: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
 }
 body main {
   height: 80vh;
@@ -79,17 +88,127 @@ body main {
 body main #log-in {
   display: flex;
   justify-content: center;
+  border-right: 2px solid #fff;
 }
 body main #log-in form {
   align-self: center;
   display: flex;
   flex-direction: column;
+  gap: 5vh;
+  width: 20vw;
+  background: rgba(255, 255, 255, 0.13);
+  padding: 4em 2em 4em 2em;
+  border-radius: 10px;
+  margin-left: 5vw;
 }
 body main #log-in form h3 {
   text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 body main #log-in form fieldset {
-  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+body main #log-in form fieldset label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+body main #log-in form fieldset input {
+  height: 5vh;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 3px;
+  border: none;
+}
+body main #log-in form button {
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 1em;
+}
+body main #sign-in {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+body main #sign-in form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 20vw;
+  background: rgba(255, 255, 255, 0.13);
+  padding: 2em;
+  border-radius: 10px;
+  margin-right: 5vw;
+}
+body main #sign-in form h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 3vh;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+body main #sign-in form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+body main #sign-in form fieldset label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+body main #sign-in form fieldset input {
+  height: 5vh;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 3px;
+  border: none;
+}
+body main #sign-in form button {
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 1em;
+}
+body main #sign-in form #choose-file {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+body main #sign-in form #choose-file label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+body main #sign-in form #choose-file input {
+  background: rgba(255, 255, 255, 0.13);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
