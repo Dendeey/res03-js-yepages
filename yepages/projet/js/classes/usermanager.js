@@ -4,7 +4,7 @@ class UserManager{
     
     #users;
     
-    constructor(users, users = []){
+    constructor(users = []){
         
         this.#users = users;
         
@@ -77,7 +77,20 @@ class UserManager{
     
     createUser(user){
         
-        this.#users.push(user);
+        let registeredEmail = this.#email;
+        let existingEmail = false;
+        for(let i = 0; i < this.#users.email.length; i++)
+        {
+            if(this.#users.email[i] === registeredEmail)
+            {
+                alert("Email déjà existant") ;
+            }
+            else
+            {
+                this.#users.push(user);    
+            }
+        }
+            
         
     }
     

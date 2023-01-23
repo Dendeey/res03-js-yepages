@@ -22,36 +22,36 @@
         <main>
             <section id="log-in">
                 <h1 class="sr-only">Formulaire de connexion</h1>
-                <form>
+                <form id="form-login">
                     <h3>Connectez-vous Ici</h3>
                     <fieldset>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required placeholder="Email">
+                        <label for="email-login">Email</label>
+                        <input type="email" name="email-login" id="email-login" required placeholder="Email">
                     </fieldset>
                     <fieldset>
-                        <label for="password">Mot de passe</label>
-                        <input type="password" name="password" id="password" required placeholder="Mot de passe">
+                        <label for="password-login">Mot de passe</label>
+                        <input type="password" name="password-login" id="password-login" required placeholder="Mot de passe">
                     </fieldset>
-                    <button>
+                    <button id="login-btn">
                         Connexion
                     </button>
                 </form>
             </section>
             <section id="sign-in">
                 <h1 class="sr-only">Formulaire d'inscription</h1>
-                <form>
+                <form id="form-sign-in">
                     <h3>Sinon, Inscrivez-vous</h3>
                     <fieldset>
                         <label for="username">Pseudo</label>
                         <input type="text" name="username" id="username" required placeholder="Dendeey...">
                     </fieldset>
                     <fieldset>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email valide" required>
+                        <label for="email-sign-in">Email</label>
+                        <input type="email" name="email-sign-in" id="email-sign-in" placeholder="Email valide" required>
                     </fieldset>
                     <fieldset>
-                        <label for="password">Mot de passe</label>
-                        <input type="password" name="password" id="password" required placeholder="Mot de passe">
+                        <label for="password-sign-in">Mot de passe</label>
+                        <input type="password" name="password-sign-in" id="password-sign-in" required placeholder="Mot de passe">
                     </fieldset>
                     <fieldset>
                         <label for="confirm-password">Confirmez mot de passe</label>
@@ -67,9 +67,9 @@
                     </fieldset>
                     <fieldset id="choose-file">
                         <label for="profil-img">Image de votre profil</label>
-                        <input type="file" name="profil-img" id="profil-img" required>
+                        <input type="file" name="profil-img" id="profil-img">
                     </fieldset>
-                    <button>
+                    <button id="signIn-btn">
                         Inscription
                     </button>
                 </form>

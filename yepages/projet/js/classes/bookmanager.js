@@ -4,7 +4,7 @@ class BookManager{
     
     #books;
     
-    constructor(books, books = []){
+    constructor(books = []){
         
         this.#books = books;
         
@@ -133,21 +133,22 @@ class BookManager{
         
     }
     
-    load(){
-        
-            let getBooks = sessionStorage.getItem("saveBook", JSON.parse(this.#books));
-            
-            let newBooks = [];
-            for(let i = 0; i < getBooks.length; i++)
-            {
-                let parseBook = JSON.parse(getBooks[i]);
-                let newBook = new Book(parseBook.id, parseBook.title, parseBook.author, parseBook.publicationDate, parseBook.totalPages, parseBook.excerpt, parseBook.coverImage);
-            }
-        
-        }
-        
-    }
+    load() 
+    {
     
+        let getBooks = sessionStorage.getItem("saveBook", JSON.parse(this.#books));
+    
+        let newBooks = [];
+        for (let i = 0; i < getBooks.length; i++) 
+        {
+            let parseBook = JSON.parse(getBooks[i]);
+            let newBook = new Book(parseBook.id, parseBook.title, parseBook.author, parseBook.publicationDate, parseBook.totalPages, parseBook.excerpt, parseBook.coverImage);
+        }
+    
+    }
+        
 }
+    
+
 
 export { BookManager };
