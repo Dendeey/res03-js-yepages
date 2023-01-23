@@ -1,0 +1,94 @@
+@import "reset";
+
+html
+{
+    font-size: 14px;
+}
+
+body
+{
+    min-height: 100vh;
+    width: 100vw;
+    
+    .sr-only
+    {
+        display: none;
+    }
+    
+    header
+    {
+        height: 10vh;
+        display: flex;
+        justify-content: center;  
+        
+        h2
+        {
+            align-self: center;
+              
+        }
+    }
+    
+    main
+    {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        #log-in
+        {
+            display: flex;
+            justify-content: center;
+            
+            form
+            {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                
+                h3
+                {
+                    text-align: center;
+                }
+                
+                fieldset
+                {
+                    margin-top: 2vh;
+                    
+                    label
+                    {
+                        
+                    }
+                    
+                    input
+                    {
+                        
+                    }
+                }
+            }
+        }
+        
+        #sign-in
+        {
+            form
+            {
+                h3
+                {
+                    
+                }
+                
+                fieldset
+                {
+                    label
+                    {
+                        
+                    }
+                    
+                    input
+                    {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
