@@ -77,17 +77,18 @@ class UserManager{
     
     createUser(user){
         
-        let behavior = false;
-        let confirmPassword = document.getElementById("confirm-password").value;
+        /*let behavior = false;
+        let confirmPassword = document.getElementById("new-confirm-password").value;
         
         for(let i = 0; i < this.#users.length; i++)
         {
-            if(user.email === this.#users[i].email)
+            if(this.#users[i].email === user.email)
             {
-                alert("Cet email est déjà existant.")
                 behavior = true;
+                alert("Cet email est déjà existant.");
+                
             }
-        }
+        };
         
         if(behavior === false)
         {
@@ -102,7 +103,33 @@ class UserManager{
         }
         else
         {
-            alert(`Email déjà utilisé`);
+            alert("Email déjà utilisé");
+        }*/
+        
+        let validEmail = true;
+        
+        for(let i=0; i<this.#users.length; i++)
+        {
+            
+            if(user.email === this.#users[i].email)
+            {
+                
+                validEmail = false;
+                break;
+
+            }
+        }
+        
+        if(validEmail)
+        {
+            
+            this.#users.push(user);
+            
+        }
+        else
+        {
+            
+            alert("Cette adresse mail est déjà utilisée");
         }
         
     }
@@ -153,7 +180,7 @@ class UserManager{
         }
     }
     
-    login(username, password)
+    login(email, password)
     {
         
     }

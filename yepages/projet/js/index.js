@@ -65,18 +65,26 @@ window.addEventListener("DOMContentLoaded", function(){
     {
         event.preventDefault();
         
-        let username = document.getElementById("username").value;
-        let email = document.getElementById("email-sign-in").value;
-        let password = document.getElementById("password-sign-in").value;
-        let cofirmPassword = document.getElementById("confirm-password").value;
-        let firstname = document.getElementById("firstname").value;
-        let lastname = document.getElementById("lastname").value;
-        let id = userManager.users.length + 1;
+        let id = userManager.users.length +1;
+        let username = document.getElementById("new-username").value;
+        let email = document.getElementById("new-email-sign-in").value;
+        let password = document.getElementById("new-password-sign-in").value;
+        let confirmPassword = document.getElementById("new-confirm-password").value;
+        let firstname = document.getElementById("new-firstname").value;
+        let lastname = document.getElementById("new-lastname").value;
+        let profileImage = document.getElementById("new-profil-img").value;
         
-        let newUser = new User(id, username, email, password, cofirmPassword, firstname, lastname);
-        userManager.createUser(newUser);
+        if(password === confirmPassword)
+        {
+            let newUser = new User(id, username, email, password, firstname, lastname, profileImage);
+            userManager.createUser(newUser);
+            console.log(userManager);
+        }else
+        {
+            alert("Les mots de passes doivent être identiques");
+        }
+        
         userManager.save();
-        
     });
     
     

@@ -125,7 +125,7 @@ body main #log-in form fieldset input {
   border-radius: 3px;
   border: none;
 }
-body main #log-in form button {
+body main #log-in form .submit {
   background: #fff;
   border: none;
   border-radius: 3px;
@@ -177,7 +177,7 @@ body main #sign-in form fieldset input {
   border-radius: 3px;
   border: none;
 }
-body main #sign-in form button {
+body main #sign-in form .submit {
   background: #fff;
   border: none;
   border-radius: 3px;
