@@ -4,7 +4,7 @@ class UserManager{
     
     #users;
     
-    constructor(users = []){
+    constructor(users){
         
         this.#users = users;
         
@@ -78,21 +78,32 @@ class UserManager{
     createUser(user){
         
         let behavior = false;
-        let confirmPassword = document.getElementById("confirm-password");
+        let confirmPassword = document.getElementById("confirm-password").value;
         
-        for(let i = 0; i < this.users.length; i++)
+        for(let i = 0; i < this.#users.length; i++)
         {
-            if(user.email === this.users[i].email)
+            if(user.email === this.#users[i].email)
             {
                 alert("Cet email est déjà existant.")
                 behavior = true;
             }
+        }
+        
+        if(behavior === false)
+        {
+            if(user.password !== "" && user.password === confirmPassword)
+            {
+                this.#users.push(user);
+            }
             else
             {
-                
+                alert("Le mot de passe de confirmation est différent.");
             }
         }
-            
+        else
+        {
+            alert(`Email déjà utilisé`);
+        }
         
     }
     

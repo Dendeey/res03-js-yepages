@@ -58,28 +58,28 @@ window.addEventListener("DOMContentLoaded", function(){
         console.log(user);
     }*/
     
-    /*let SignInBtn = document.getElementById("signIn-btn");
+    let SignInForm = document.getElementById("form-sign-in");
+    let userManager = new UserManager([]);
     
-    SignInBtn.addEventListener("submit", function()
+    SignInForm.addEventListener("submit", function(event)
     {
-
+        event.preventDefault();
         
-    });*/
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email-sign-in").value;
+        let password = document.getElementById("password-sign-in").value;
+        let cofirmPassword = document.getElementById("confirm-password").value;
+        let firstname = document.getElementById("firstname").value;
+        let lastname = document.getElementById("lastname").value;
+        let id = userManager.users.length + 1;
+        
+        let newUser = new User(id, username, email, password, cofirmPassword, firstname, lastname);
+        userManager.createUser(newUser);
+        userManager.save();
+        
+    });
     
-    let userManager = new UserManager();
-    userManager.load();
-    userManager.save();
     
-    console.log(userManager);
-    
-    let username = document.getElementById("username").value;
-    let email = document.getElementById("email-sign-in").value;
-    let password = document.getElementById("password-sign-in").value;
-    let cofirmPassword = document.getElementById("confirm-password").value;
-    let firstname = document.getElementById("firstname").value;
-    let lastname = document.getElementById("lastname").value;
-    
-    let newUser = new User(username, email, password, cofirmPassword, firstname, lastname);
     
     
 });

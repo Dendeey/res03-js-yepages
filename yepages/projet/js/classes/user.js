@@ -13,7 +13,7 @@ class User{
         
         this.#id = id;
         this.#username = username;
-        this.#email = email;
+        this.#email = email;    
         this.#password = password;
         this.#firstName = firstName;
         this.#lastName = lastName;
