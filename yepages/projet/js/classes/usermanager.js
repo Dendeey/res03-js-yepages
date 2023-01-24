@@ -77,17 +77,19 @@ class UserManager{
     
     createUser(user){
         
-        let registeredEmail = this.#email;
-        let existingEmail = false;
-        for(let i = 0; i < this.#users.email.length; i++)
+        let behavior = false;
+        let confirmPassword = document.getElementById("confirm-password");
+        
+        for(let i = 0; i < this.users.length; i++)
         {
-            if(this.#users.email[i] === registeredEmail)
+            if(user.email === this.users[i].email)
             {
-                alert("Email déjà existant") ;
+                alert("Cet email est déjà existant.")
+                behavior = true;
             }
             else
             {
-                this.#users.push(user);    
+                
             }
         }
             
@@ -121,21 +123,23 @@ class UserManager{
     
     save(){
         
-        sessionStorage.setItem("saveUser", JSON.stringify(this.#users));
+        localStorage.setItem("saveUser", JSON.stringify(this.#users));
         
     }
     
     load(){
         
-        let getUsers = sessionStorage.getItem("saveUser", JSON.parse(this.#users));
+        let getUsers = JSON.parse(localStorage.getItem("saveUser"));
         
-        let newUsers = [];
-        for (let i = 0; i < getUsers.length; i++) 
+        if(getUsers !== null)
         {
-            let parseUser = JSON.parse(getUsers[i]);
-            let newUser = new User(parseUser.id, parseUser.username, parseUser.email, parseUser.password, parseUser.firstName, parseUser.lastName, parseUser.profileImage);
+            for (let i = 0; i < getUsers.length; i++) 
+            {
+                let parseData = JSON.parse(getUsers[i]);
+                let newUser = new User(parseData.id, parseData.username, parseData.email, parseData.password, parseData.firstName, parseData.lastName, parseData.profileImage);
+                this.#users.push(newUser);
+            }
         }
-        
     }
     
     login(username, password)
