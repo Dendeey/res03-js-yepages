@@ -10,7 +10,7 @@ class UserManager{
         
     }
     
-    get(){
+    get users(){
         
         return this.#users;
     }
@@ -77,7 +77,7 @@ class UserManager{
     
     createUser(user){
         
-        /*let behavior = false;
+        let behavior = false;
         let confirmPassword = document.getElementById("new-confirm-password").value;
         
         for(let i = 0; i < this.#users.length; i++)
@@ -85,7 +85,6 @@ class UserManager{
             if(this.#users[i].email === user.email)
             {
                 behavior = true;
-                alert("Cet email est déjà existant.");
                 
             }
         };
@@ -98,38 +97,12 @@ class UserManager{
             }
             else
             {
-                alert("Le mot de passe de confirmation est différent.");
+                alert("mdp différent");
             }
         }
         else
         {
             alert("Email déjà utilisé");
-        }*/
-        
-        let validEmail = true;
-        
-        for(let i=0; i<this.#users.length; i++)
-        {
-            
-            if(user.email === this.#users[i].email)
-            {
-                
-                validEmail = false;
-                break;
-
-            }
-        }
-        
-        if(validEmail)
-        {
-            
-            this.#users.push(user);
-            
-        }
-        else
-        {
-            
-            alert("Cette adresse mail est déjà utilisée");
         }
         
     }
@@ -182,7 +155,21 @@ class UserManager{
     
     login(email, password)
     {
-        
+        if (this.#users.length > 0) 
+        {
+            for (let i = 0; i < this.#users.length; i++) 
+            {
+                if (email === this.#users[i].email && password === this.#users[i].password) 
+                {
+                    alert(`Bonjour ${this.#users[i].username}`);
+                    break;
+                }
+            }
+        }
+        else 
+        {
+            alert("Ce compte n'existe pas");
+        }
     }
     
 }

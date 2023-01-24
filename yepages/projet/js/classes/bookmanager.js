@@ -10,7 +10,7 @@ class BookManager{
         
     }
     
-    get(){
+    get books(){
         
         return this.#books;
     }

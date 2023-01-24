@@ -21,7 +21,7 @@ class User{
         
     }
     
-    get(){
+    get id(){
         
         return this.#id;
     }
@@ -32,7 +32,7 @@ class User{
             
     }
     
-    get(){
+    get username(){
         
         return this.#username;
     }
@@ -43,7 +43,7 @@ class User{
         
     }
     
-    get(){
+    get email(){
         
         return this.#email;
     }
@@ -54,7 +54,7 @@ class User{
         
     }
     
-    get(){
+    get password(){
         
         return this.#password;
     }
@@ -65,7 +65,7 @@ class User{
         
     }
     
-    get(){
+    get firstname(){
         
         return this.#firstName;
     }
@@ -76,7 +76,7 @@ class User{
         
     }
     
-    get(){
+    get lastname(){
         
         return this.#lastName;
     }
@@ -87,7 +87,7 @@ class User{
         
     }
     
-    get(){
+    get profileImage(){
         
         return this.#profileImage;
     }

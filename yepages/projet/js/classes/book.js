@@ -21,7 +21,7 @@ class Book{
         
     }
     
-    get(){
+    get id(){
         
         return this.#id;
     }
@@ -32,7 +32,7 @@ class Book{
         
     }
     
-    get(){
+    get title(){
         
         return this.#title;
     }
@@ -43,7 +43,7 @@ class Book{
         
     }
     
-    get(){
+    get author(){
         
         return this.#author;
     }
@@ -54,7 +54,7 @@ class Book{
         
     }
     
-    get(){
+    get publicationDate(){
         
         return this.#publicationDate;
     }
@@ -65,7 +65,7 @@ class Book{
         
     }
     
-    get(){
+    get totalPages(){
         
         return this.#totalPages;
     }
@@ -76,7 +76,7 @@ class Book{
         
     }
     
-    get(){
+    get excerpt(){
         
         return this.#excerpt;
     }
@@ -87,7 +87,7 @@ class Book{
         
     }
     
-    get(){
+    get coverImage(){
         
         return this.#coverImage;
     }
